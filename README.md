@@ -10,8 +10,9 @@ This doesn't work in linux/WSL and as such you have to manually open the file an
 
 To install this app:
 * clone this repository
-* navigate to the repository rootcargo build --release
+* navigate to the repository root
 * run `bash install.sh` - this will build a release version of the app and copy it to ~/.cargo/bin/
+NOTE: if you do not have ~/.cargo/bin/ in your PATH you will need to add it, or copy the compiled output to a folder that is in your PATH, so you can run it anywhere with `wsl-aws-config`
 
 # Running
 * First, make sure you have your aws credentials copied to clipboard, you want to copy the whole credentials including the incorrect name ([xxxxxxxxxxxx_AWSAdministratorAccess]) as this will be replaced with [default] automatically
