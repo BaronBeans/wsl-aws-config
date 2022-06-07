@@ -12,6 +12,7 @@ To install this app:
 * clone this repository
 * navigate to the repository root
 * run `bash install.sh` - this will build a release version of the app and copy it to ~/.cargo/bin/
+
 NOTE: if you do not have ~/.cargo/bin/ in your PATH you will need to add it, or copy the compiled output to a folder that is in your PATH, so you can run it anywhere with `wsl-aws-config`
 
 # Running
