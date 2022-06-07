@@ -12,3 +12,8 @@ To install this app:
 * clone this repository
 * navigate to the repository rootcargo build --release
 * run `bash install.sh` - this will build a release version of the app and copy it to ~/.cargo/bin/
+
+# Running
+* First, make sure you have your aws credentials copied to clipboard, you want to copy the whole credentials including the incorrect name ([xxxxxxxxxxxx_AWSAdministratorAccess]) as this will be replaced with [default] automatically
+* Then, run `wsl-aws-config` in any terminal window.
+* If successful you should see the config printed out in the console, if not check you have the right details copied and try again.
