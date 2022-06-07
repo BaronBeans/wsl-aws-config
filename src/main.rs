@@ -38,7 +38,7 @@ fn get_config_from_clipboard() -> Config {
     new_config
 }
 
-fn write_new_credentials_file(new_config: Config) {
+fn write_new_credentials_file(cfg: Config) {
     let path = Path::new("/home/sean/.aws/credentials");
     let mut write = OpenOptions::new()
         .write(true)
@@ -48,6 +48,6 @@ fn write_new_credentials_file(new_config: Config) {
         .expect("Unable to open file");
         
     write
-        .write_fmt(format_args!("[default]\n{}\n{}\n{}", new_config.access_key, new_config.secret_access_key, new_config.session_token))
+        .write_fmt(format_args!("[default]\n{}\n{}\n{}", cfg.access_key, cfg.secret_access_key, cfg.session_token))
         .expect("unable to write data");
 }
