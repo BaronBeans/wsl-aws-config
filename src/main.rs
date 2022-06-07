@@ -39,7 +39,7 @@ fn get_config_from_clipboard() -> Config {
 }
 
 fn write_new_credentials_file(new_config: Config) {
-    let path = Path::new("/home/sean/.aws/credentials-two");
+    let path = Path::new("/home/sean/.aws/credentials");
     let mut write = OpenOptions::new()
         .write(true)
         .create(true)
