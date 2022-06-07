@@ -13,9 +13,9 @@ struct Config {
 impl Config {
     fn new(access_key:String, secret_access_key:String, session_token:String) -> Self {
         Config {
-            access_key: access_key,
-            secret_access_key: secret_access_key,
-            session_token: session_token,
+            access_key,
+            secret_access_key,
+            session_token,
         }
     }
 }
