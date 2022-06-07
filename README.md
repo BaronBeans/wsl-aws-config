@@ -10,5 +10,5 @@ This doesn't work in linux/WSL and as such you have to manually open the file an
 
 To install this app:
 * clone this repository
-* navigate to the repository root
+* navigate to the repository rootcargo build --release
 * run `bash install.sh` - this will build a release version of the app and copy it to ~/.cargo/bin/
