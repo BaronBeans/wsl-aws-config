@@ -11,5 +11,4 @@ This doesn't work in linux/WSL and as such you have to manually open the file an
 To install this app:
 * clone this repository
 * navigate to the repository root
-* run `cargo build --release`
-* copy the file `/target/build/release/wsl-aws-config` to somewhere in your PATH, so you can run it
+* run `bash install.sh` - this will build a release version of the app and copy it to ~/.cargo/bin/
