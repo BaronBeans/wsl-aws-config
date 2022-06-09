@@ -8,6 +8,9 @@ This doesn't work in linux/WSL and as such you have to manually open the file an
 
 # Installation
 
+To install rust if you don't already have it:
+* `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
 To install this app:
 * clone this repository
 * navigate to the repository root
