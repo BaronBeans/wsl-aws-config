@@ -1,17 +1,17 @@
+use cli_clipboard::{ClipboardContext, ClipboardProvider};
+use std::fs::OpenOptions;
 use std::io::prelude::*;
 use std::path::Path;
-use std::fs::OpenOptions;
-use cli_clipboard::{ClipboardContext, ClipboardProvider};
 
 #[derive(Debug)]
 struct Config {
     access_key: String,
     secret_access_key: String,
-    session_token: String
+    session_token: String,
 }
 
 impl Config {
-    fn new(access_key:String, secret_access_key:String, session_token:String) -> Self {
+    fn new(access_key: String, secret_access_key: String, session_token: String) -> Self {
         Config {
             access_key,
             secret_access_key,
@@ -33,8 +33,15 @@ fn get_config_from_clipboard() -> Config {
         panic!("Please copy your aws config to clipboard and try again");
     }
 
-    let new_config = Config::new(String::from(configs[1]), String::from(configs[2]), String::from(configs[3]));
-    println!("{}\n{}\n{}", new_config.access_key, new_config.secret_access_key, new_config.session_token);
+    let new_config = Config::new(
+        String::from(configs[1]),
+        String::from(configs[2]),
+        String::from(configs[3]),
+    );
+    println!(
+        "{}\n{}\n{}",
+        new_config.access_key, new_config.secret_access_key, new_config.session_token
+    );
     new_config
 }
 
@@ -46,8 +53,11 @@ fn write_new_credentials_file(cfg: Config) {
         .truncate(true)
         .open(&path)
         .expect("Unable to open file");
-        
+
     write
-        .write_fmt(format_args!("[default]\n{}\n{}\n{}", cfg.access_key, cfg.secret_access_key, cfg.session_token))
+        .write_fmt(format_args!(
+            "[default]\n{}\n{}\n{}",
+            cfg.access_key, cfg.secret_access_key, cfg.session_token
+        ))
         .expect("unable to write data");
 }
