@@ -19,6 +19,6 @@ To install this app:
 NOTE: if you do not have ~/.cargo/bin/ in your PATH you will need to add it, or copy the compiled output to a folder that is in your PATH, so you can run it anywhere with `aws-config-wsl`
 
 # Running
-* First, make sure you have your aws credentials copied to clipboard, you want to copy the whole credentials including the incorrect name ([xxxxxxxxxxxx_AWSAdministratorAccess]) as this will be replaced with [default] automatically
-* Then, run `aws-config-wsl` in any terminal window.
-* If successful you should see the config printed out in the console, if not check you have the right details copied and try again.
+* First make sure you are connected to the pulse vpn.
+* Run the powershell script ./vault-login.ps1 to log into aws and write the credentials needed to ~/.aws/vault.txt.
+* Run aws-config-wsl to copy the relevant config from ~/.aws/vault.txt to ~/.aws/credentials in the correct format.
