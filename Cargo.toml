@@ -4,5 +4,3 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-dirs = "4.0"
-cli-clipboard = "0.2.1"
